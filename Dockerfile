@@ -4,4 +4,5 @@ LABEL author="onur.yukselen@umassmed.edu" description="Docker image containing a
 
 COPY environment.yml /
 RUN conda env create -f /environment.yml && conda clean -a
+RUN mkdir -p /export /data
 ENV PATH /opt/conda/envs/nephantes-mytest-1.0/bin:$PATH
